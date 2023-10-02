@@ -3,13 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Video</title>
-
-    <!-- styles -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="styles.css" />
+
+    <title>Video</title>
   </head>
   <body>
-    <h1>video project</h1>
+    <!-- Preloader -->
+    <div id="preloader">
+      <img src="preloader.gif" alt="preloader gif">
+    </div>
+
+    <header>
+      <video class="video-container" muted autoplay loop>
+        <source src="./video.mp4" type="video/mp4"/>
+      </video>
+      <h1 id="title">Video Project</h1>
+
+      <div class="playback-controls">
+        <button id="controlBtn"><i class="fa-solid fa-pause"></i></button>
+      </div>
+    </header>
+    
+
     <!-- javascript -->
     <script src="app.js"></script>
   </body>
