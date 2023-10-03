@@ -4,17 +4,79 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scroll</title>
-    <!-- font-awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    />
-    <!-- styles -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>scroll project</h1>
-    <!-- javascript -->
+    <!-- Header -->
+    <header>
+      <div class="title-container">
+        <h1 id="title">Future Focus Company</h1>
+        <nav id="nav-menu"><i class="fa-solid fa-bars"></i></nav>
+      </div>
+      <div class="link-container">
+        <ul>
+          <li class="list-item"><a href="#Home">Home</a></li>
+          <li class="list-item"><a href="#AboutUs">About Us</a></li>
+          <li class="list-item"><a href="#Services">Services</a></li>
+          <li class="list-item"><a href="#Pricing">Pricing</a></li>
+          <li class="list-item"><a href="#Contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Sections -->
+
+    <section id="Home">
+      <div class="section-header">
+        <h2 class="section-title">Scroll Project</h2>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ducimus ipsam aliquid rerum ex corporis. Quia, veniam vero quisquam modi, perspiciatis.</p>
+      <button><a href="#Services">Explore Services</a></button>
+    </section>
+
+    <section id="AboutUs">
+      <div class="section-header">
+        <h2 id="AboutUs" class="section-title">About Us</h2>
+      </div>
+    </section>
+
+    <section id="Services">
+      <div class="section-header">
+        <h2 id="Services" class="section-title">Services</h2>
+      </div>
+    </section>
+
+    <section id="Pricing">
+      <div class="section-header">
+        <h2 id="Pricing" class="section-title">Pricing</h2>
+      </div>
+    </section>
+
+    <section id="Contact">
+      <div class="section-header">
+        <h2 id="Contact" class="section-title">Contact</h2>
+      </div>
+    </section>
+
+    <!-- Scroll-to-top button -->
+    <a href="#Home">
+      <button id="scroll-btn"><i class="fa-solid fa-chevron-up"></i></button>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+      &copy; Future Focus Company <spam id="year"></spam>. All rights reserved.
+    </footer>
+    
+    <!-- Javascript -->
     <script src="app.js"></script>
   </body>
 </html>

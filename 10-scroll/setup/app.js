@@ -1,13 +1,50 @@
-// Element.getBoundingClientRect() method returns the size of an element and its position relative to the viewport.
-// pageYOffset is a read - only window property that returns the number of pixels the document has been scrolled vertically.
-// slice extracts a section of a string without modifying original string
-//offsetTop - A Number, representing the top position of the element, in pixels
+const header = document.querySelector('header');
+const menu = document.querySelector('#nav-menu');
+const links = document.querySelectorAll('a');
+const year = document.querySelector('footer #year');
+const scrollBtn = document.querySelector('#scroll-btn');
 
-// ********** set date ************
+const headerHeight = header.getBoundingClientRect().height;
+const homePageHeight = document.querySelector('section#Home').getBoundingClientRect().height;
 
-// ********** close links ************
+// auto-update year
+year.outerHTML = new Date().getFullYear();
 
-// ********** fixed navbar ************
+// menu expanding/collapsing for mobile
+menu.addEventListener('click', () => header.classList.toggle('expand'));
 
-// ********** smooth scroll ************
-// select links
+window.addEventListener('scroll', () => {
+    const positionY = window.scrollY;
+
+    // change header style according to the positionY
+    header.classList.toggle('scrolled', 
+        positionY > homePageHeight - headerHeight
+    );
+
+    // toggle scroll-to-top btn according to the positionY
+    scrollBtn.classList.toggle('show', positionY > homePageHeight);
+});
+
+links.forEach(link => {
+    const href = link.getAttribute('href');
+
+    // if link starts with '#'
+    if (/^\#/.test(href)) {
+        link.addEventListener('click', (e) => {
+            // get targeted element's position
+            elemHeight = document.querySelector(href).offsetTop;
+
+            e.preventDefault();
+
+            // collapse menu if it is expanded
+            header.classList.remove('expand');
+            
+            // scroll to targeted element's position
+            window.scrollTo({
+                left: 0,
+                top: elemHeight - headerHeight,
+                behavior: 'smooth'
+            });
+        });
+    }
+})
