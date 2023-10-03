@@ -32,7 +32,7 @@ links.forEach(link => {
     if (/^\#/.test(href)) {
         link.addEventListener('click', (e) => {
             // get targeted element's position
-            elemHeight = document.querySelector(href).offsetTop;
+            elemPosition = document.querySelector(href).offsetTop;
 
             e.preventDefault();
 
@@ -42,7 +42,7 @@ links.forEach(link => {
             // scroll to targeted element's position
             window.scrollTo({
                 left: 0,
-                top: elemHeight - headerHeight,
+                top: elemPosition - headerHeight,
                 behavior: 'smooth'
             });
         });
