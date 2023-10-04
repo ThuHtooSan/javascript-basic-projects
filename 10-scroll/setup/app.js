@@ -32,7 +32,7 @@ links.forEach(link => {
     if (/^\#/.test(href)) {
         link.addEventListener('click', (e) => {
             // get targeted element's position
-            elemPosition = document.querySelector(href).offsetTop;
+            const elemPosition = document.querySelector(href).offsetTop;
 
             e.preventDefault();
 
